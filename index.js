@@ -1,9 +1,9 @@
 function getRemainder(inputString){
   try{
-    if(!inputString || Number(inputString) < 11 ) return 'Invalid input'
+    if(!inputString) return 'Invalid input'
     let state = 0
     const arr = inputString.split('')
-    if(arr.length === 0) return 'Invalid input'
+    if(!arr.length) return 'Invalid input'
     for (let i=0; i< arr.length; i++){
       let ele = Number(arr[i])
       if(ele !== 0 && ele !== 1) return 'Invalid input'
@@ -17,7 +17,6 @@ function getRemainder(inputString){
           break
         case 2: 
           if(ele === 0) state = 1
-          else state = 2
           break
         default:
           return
@@ -30,6 +29,7 @@ function getRemainder(inputString){
   }
 }
 
+console.log(getRemainder('10'))
 console.log(getRemainder('110'))
 console.log(getRemainder('1010'))
 

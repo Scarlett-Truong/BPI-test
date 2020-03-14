@@ -11,10 +11,6 @@ describe("Units testing", () => {
     assert.equal(getRemainder(''), 'Invalid input')
   })
 
-  it("Input < 3", () => {
-    assert.equal(getRemainder('10'),'Invalid input')
-  })
-
   it("Non-binary input", () => {
     assert.equal(getRemainder('12'),'Invalid input')
   })
